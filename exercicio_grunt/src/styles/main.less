@@ -5,6 +5,9 @@
 @buttonColor: #303030;
 @corDoh2: #daa520;
 
+@breakpointMobile: ~"(max-width: 767px)";
+@breakpointTablet: ~"(min-width: 768px) and (max-width: 1023px)";
+
 *{
     margin: 0;
     padding: 0;
@@ -29,6 +32,15 @@ li {
     display: flex;
     flex-direction: column;
     justify-content: center;
+
+    @media @breakpointMobile {
+        max-width: 70%;
+        margin: 32px auto;
+    }
+
+    @media @breakpointTablet {
+        max-width: 80%;      
+    }
 }
 
 .bio-personal {
